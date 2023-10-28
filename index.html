@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Shopping</title>
+    <link rel="stylesheet" href="assets/css/input.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script src="assets/js/script.js" defer></script>
+</head>
+
+<body>
+    <section class="bg-slate-400 w-screen min-h-screen relative flex">
+        <div id="storageBody" class="w-full md:w-[300px] lg:w-[500px] bg-red-900 text-white h-screen fixed top-0  z-50 transition duration-300 left-full">
+            <h3 class="text-left text-2xl p-2 text-yellow-400 ">Card</h3>
+            <div class="grid grid-cols-1 gap-y-3 pl-5">
+            </div>
+            <div class="flex w-full absolute bottom-0">
+                <button class="w-1/2 bg-yellow-500 text-xl text-center py-3 uppercase font-bold text-black totalPrice">0</button>
+                <button id="closeButton" class="w-1/2 bg-black text-white text-center py-3 uppercase font-bold">close</button>
+            </div>
+        </div>
+        <div id="containerBody" class="container space-y-3 pt-5 md:w-[70%] lg:w-[60%] mx-auto md:p-20 duration-300 flex-col md:flex-row md:items-start md:space-y-10 md:flex-wrap">
+            <div class="flex justify-around md:space-x-0 md:justify-between w-full">
+                <h1 class="text-3xl text-blue-900 font-bold capitalize">Amirmohammad</h1>
+                <div id="iconStorage">
+                    <i  class="bi bi-bag text-5xl relative text-white hover:cursor-pointer">
+                        <span id="numberOfProduct"
+                            class="absolute -top-4 -right-4 px-[10px] py-[3px] flex justify-center items-center rounded-full bg-orange-500 text-white text-lg">0</span>
+                    </i>
+                </div>
+                
+            </div>
+            <div class="grid p-5 md:p-0 md:grid-rows-2 md:grid-cols-2 lg:grid-cols-3 md:gap-5">
+                <div class="bg-slate-400 shadow-xl shadow-black p-3 flex-col justify-between overflow-hidden h-full">
+                    <figure class="w-full h-[70%]">
+                        <img src="assets/img/1.png" alt="" class="w-full h-full">
+                    </figure>
+                    <div class="w-full h-[30%] py-2 flex flex-col space-y-2 items-center justify-around">
+                        <h4 class="text-xl">product name 1</h4>
+                        <h5>100000</h5>
+                        <button onclick="addProductToStorage(this)" class="flex justify-center items-center bg-black capitalize text-xl text-white w-full py-2">add to card</button>
+                    </div>
+                </div>
+                <div class="bg-slate-400 shadow-xl shadow-black p-3 flex-col justify-between overflow-hidden h-full">
+                    <figure class="w-full h-[70%]">
+                        <img src="assets/img/2.png" alt="" class="w-full h-full">
+                    </figure>
+                    <div class="w-full h-[30%] py-2 flex flex-col space-y-2 items-center justify-around">
+                        <h4 class="text-xl">product name 2</h4>
+                        <h5>200000</h5>
+                        <button onclick="addProductToStorage(this)" class="flex justify-center items-center bg-black capitalize text-xl text-white w-full py-2">add to card</button>
+                    </div>
+                </div>
+                <div class="bg-slate-400 shadow-xl shadow-black p-3 flex-col justify-between overflow-hidden h-full">
+                    <figure class="w-full h-[70%]">
+                        <img src="assets/img/3.png" alt="" class="w-full h-full">
+                    </figure>
+                    <div class="w-full h-[30%] py-2 flex flex-col space-y-2 items-center justify-around">
+                        <h4 class="text-xl">product name 3</h4>
+                        <h5>300000</h5>
+                        <button onclick="addProductToStorage(this)" class="flex justify-center items-center bg-black capitalize text-xl text-white w-full py-2">add to card</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
